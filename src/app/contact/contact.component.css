@@ -1,0 +1,15 @@
+.formContainer {
+    margin-top: 15%;
+    margin-left: 35%;
+    width: 30%;
+    height: 70%;
+    text-align: center;
+    background-color: white;
+}
+
+.submitButton {
+    background-color: grey;
+    color: white;
+    border-color: black;
+    font-size: 16pt;
+}

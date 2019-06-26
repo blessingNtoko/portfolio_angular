@@ -1,0 +1,18 @@
+<mat-toolbar role="heading" class="portTool">
+    <span><a href='#'>Portfolio</a></span>
+    <div class='navigate'>
+        <ul class='navItems'>
+            <a [routerLink]="['/work']">
+                <li class='list'>Work</li>
+            </a>
+            <a [routerLink]="['/about']">
+                <li class='list'>About</li>
+            </a>
+            <a [routerLink]="['/contact']">
+                <li class='list'>Contact</li>
+            </a>
+        </ul>
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

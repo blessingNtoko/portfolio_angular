@@ -1,0 +1,43 @@
+body,
+html {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+}
+
+.portTool {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    justify-content: space-around;
+}
+
+span {
+    font-size: 25pt;
+}
+
+span a {
+    text-decoration: none;
+    color: white;
+}
+
+.navItems {
+    list-style: none;
+    display: flex;
+}
+
+.navItems a {
+    text-decoration: none;
+    color: white;
+    margin: 10%;
+}
+
+.navItems a:hover {
+    background-color: grey;
+}

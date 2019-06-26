@@ -1,0 +1,49 @@
+<div class="formContainer">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Full Name:</mat-label>
+            <input matInput type="text" formControlName="fullName" required />
+            <mat-error *ngFor="let validation of contactFormValidationErrors.fullName">
+                <mat-error class="error-message" *ngIf="
+          contactForm.get('fullName').hasError(validation.type) &&
+          (contactForm.get('fullName').dirty ||
+            contactForm.get('fullName').touched)">
+                    {{ validation.message }}
+                </mat-error>
+            </mat-error>
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Email:</mat-label>
+            <input matInput type="email" formControlName="email" required />
+            <mat-error *ngFor="let validation of contactFormValidationErrors.email">
+                <mat-error class="error-message" *ngIf="
+          contactForm.get('email').hasError(validation.type) &&
+          (contactForm.get('email').dirty || contactForm.get('email').touched)">
+                    {{ validation.message }}
+                </mat-error>
+            </mat-error>
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Company:</mat-label>
+            <input matInput type="text" formControlName="company" />
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Subject:</mat-label>
+            <input matInput type="text" formControlName="subject" />
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Message:</mat-label>
+            <textarea matInput type="text" formControlName="message" required></textarea>
+            <mat-error *ngFor="let validation of contactFormValidationErrors.message">
+                <mat-error class="error-message" *ngIf="
+          contactForm.get('message').hasError(validation.type) &&
+          (contactForm.get('message').dirty ||
+            contactForm.get('message').touched)">
+                    {{ validation.message }}
+                </mat-error>
+            </mat-error>
+        </mat-form-field><br />
+
+        <button class='submitButton' mat-stroked-button type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </form>
+</div>
